@@ -1,0 +1,324 @@
+.logo-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease;
+  z-index: 1000;
+}
+
+.logo-container.hidden {
+  transform: translate(-50%, -120%);
+}
+
+.app-logo {
+  font-size: 1.5rem;
+  padding-top: 4vh;
+  height: auto;
+  font-weight: bolder;
+  opacity: 0.2;
+  color: var(--primary-color-2);
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+}
+
+.tag-line {
+  font-size: var(--font-lg);
+  font-family: var(--font-family);
+  line-height: 95%;
+  font-weight: 400;
+  margin-bottom: 4vh;
+  color: var(--font-color);
+}
+
+.sub-text {
+  font-size: var(--font-md);
+  font-family: var(--font-family);
+  font-weight: 300;
+  margin-bottom: 5vh;
+  color: var(--font-color);
+  opacity: 0.7;
+}
+
+.plan-chat-links a {
+  padding: 5vh 4vw;
+  margin: 2vh;
+  border-radius: 50px;
+  font-family: var(--font-family);
+}
+
+.plan-chat-links a:last-child {
+  background-color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  border: 1px solid var(--primary-color);
+  color: var(--white-text-color);
+}
+
+.plan-chat-links a:last-child:hover {
+  background-color: transparent;
+  color: var(--primary-color-2);
+  border: 1px solid var(--primary-color-2);
+}
+
+.video-container {
+  width: 90vw; /* 80% of viewport width */
+  height: 98vh; /* 95% of viewport height */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  position: relative;
+}
+
+.video-player {
+  width: 100%; /* Fill container width */
+  height: 100%; /* Fill container height */
+  transform: scale(1.5); /* Start zoomed-in */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.mvp-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+
+.mvp-line {
+  width: 55%;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: var(--font-md-1);
+  color: var(--font-color);
+}
+
+.ninja-meditation {
+  max-width: 10vw;
+}
+
+.project-section {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
+}
+
+.moto-section {
+  width: 90vw;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15vh;
+}
+
+.moto-line {
+  padding-right: 5vw;
+  width: 100vw;
+  font-size: var(--font-md-3);
+  line-height: normal;
+  font-weight: 400;
+  font-family: var(--font-family);
+}
+
+.moto-desc {
+  font-size: var(--font-sm);
+  margin-top: 3vh;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  color: var(--font-color);
+  opacity: 0.8;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 98.5vw;
+  height: 90vh;
+  margin-top: 15vh;
+  grid-row-gap: 1vh;
+  grid-column-gap: 1vh;
+}
+
+.grid-item-1 {
+  border: 1px solid teal;
+}
+
+.grid-item-2 {
+  border: 1px solid teal;
+}
+
+.grid-item-3 {
+  border: 1px solid teal;
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 2;
+}
+
+.grid-item-4 {
+  grid-column: 1 / span 2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.grid-item-4 a {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  font-family: var(--font-family);
+  font-size: var(--font-md);
+  background-color: #ecedee;
+  border-radius: 20px;
+  font-weight: 500;
+  color: var(--font-color);
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.grid-item-4 a:hover {
+  background-color: var(--primary-color-2);
+  color: var(--white-text-color);
+  border: 1px solid var(--primary-color-2);
+}
+
+.things-we-do-well-section {
+  width: 40%;
+  margin-left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 10%;
+}
+
+.design-dev-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+.things-we-do-well-h1 {
+  font-size: var(--font-md-2);
+  font-family: var(--font-family);
+}
+
+.design-dev-section p {
+  font-family: var(--font-family);
+  padding: 2vh 2vw 2vh 0;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.design-dev-heading {
+  font-weight: 600;
+}
+
+.ninja-journey-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 95vh;
+  margin-top: 10vh;
+}
+
+.ninja-journey-h1 {
+  font-size: var(--font-md-2);
+  font-family: var(--font-family);
+  font-weight: 400;
+  margin-bottom: 4vh;
+}
+
+.ninja-journey-sub-text {
+  font-size: 1.2rem;
+  font-family: var(--font-family);
+  font-weight: 300;
+  margin-bottom: 5vh;
+  color: var(--font-color);
+  opacity: 0.7;
+}
+
+.ninja-journey-links a {
+  padding: 4vh 2.5vw;
+  margin: 2vh;
+  border-radius: 50px;
+  font-family: var(--font-family);
+}
+
+.ninja-journey-links a:last-child {
+  background-color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  border: 1px solid var(--primary-color);
+  color: var(--white-text-color);
+}
+
+.ninja-journey-links a:last-child:hover {
+  background-color: transparent;
+  color: var(--primary-color-2);
+  border: 1px solid var(--primary-color-2);
+}
+
+.build-launch-grow{
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ninja-stage-arrows{
+    margin-bottom: 5rem;
+}
+
+.ninja-images{
+    max-width: 10rem;
+}
+
+.ninja-stage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.ninja-desc{
+    color: var(--font-color);
+    opacity: 0.6;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .ninja-stage-arrows{
+        display: none;
+    }
+
+    .build-launch-grow{
+        flex-direction: column;
+    }
+
+    .things-we-do-well-section{
+        margin-left: 0;
+        padding: 1vh 5vw;
+    }
+
+    .moto-section{
+        flex-direction: column;
+    }
+
+    .design-dev-section {
+        width: 100vw;
+    }
+
+    .ninja-journey-section{
+        padding: 5vw;
+    }
+}

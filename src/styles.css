@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  --primary-color: #323232;
+  --secondary-color: #551a8b;
+  --primary-color-2:#1A6AFF;
+  
+  --font-lg: 5rem;
+  --font-md-3: 3rem;
+  --font-md-2: 2.5rem;
+  --font-md-1: 2rem;
+  --font-md: 1.5rem;
+  --font-sm: 1rem;
+  --font-family: "Raleway", sans-serif;
+  --white-text-color: white;
+  --font-color: #323232;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+}
