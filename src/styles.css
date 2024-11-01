@@ -6,10 +6,15 @@
 
   box-sizing: border-box;
   --primary-color: #323232;
+  --app-color: #324158;
+  --primary-color-50-op: #323232a7;
   --secondary-color: #551a8b;
   --primary-color-2:#1A6AFF;
+  --border-color-light: #EAEAE4;
+  --border-color-dark:#C2C2C2;
   
   --font-lg: 5rem;
+  --app-size: 7rem;
   --font-md-3: 3rem;
   --font-md-2: 2.5rem;
   --font-md-1: 2rem;
@@ -18,6 +23,9 @@
   --font-family: "Raleway", sans-serif;
   --white-text-color: white;
   --font-color: #323232;
+  --font-color-light: #6E6E6E;
+
+  --social-color: #484849;
 }
 html,
 body {
