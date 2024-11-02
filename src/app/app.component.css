@@ -482,7 +482,7 @@ a {
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
-    url("assets/Card.png");
+    url("/assets/Card.png");
   background-size: cover;
 
   border: 0.5px solid var(--border-color-light);
