@@ -165,11 +165,11 @@ export class AppComponent {
   ];
 
   bg = {
-    hero: '/assets/flowers.png',
-    things: '/assets/Montain 2.svg',
-    thingsSunBirds: '/assets/Sun w Birds.svg',
-    videoTrees: '/assets/trees.png',
-    footer: '/assets/bg2.png'
+    hero: 'assets/flowers.png',
+    things: 'assets/Montain 2.svg',
+    thingsSunBirds: 'assets/Sun w Birds.svg',
+    videoTrees: 'assets/trees.png',
+    footer: 'assets/bg2.png'
   }
 
   title = 'dzinr';
