@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## gh-page deployment process
 Build project through angular cli : ng build --base-href "https://SameemaNasrin.github.io/dzinr/" --configuration=production
+
+
 Change folder in CLI : cd dist/dzinr
 Initialize new git in dist/dzinr folder: git init
                                          git remote add origin https://github.com/SameemaNasrin/dzinr.git
