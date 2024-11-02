@@ -3,15 +3,21 @@
   <div class="app-logo">DZINR.</div>
 </div>
 
-<ng-container class="flex-container">
+<div class="flex-container">
   <div class="hero-section">
-    <h1 class="tag-line">Build your app fast<br />with Design Ninjas</h1>
-    <h6 class="sub-text">Build your app fast with Design Ninjas</h6>
+    <h1 class="tag-line">Designing the Future<br />for Visionary Brands</h1>
+    <h6 class="sub-text">
+      Whether you're just starting or scaling up, we are here to bring your
+      ideas to life
+    </h6>
     <div class="plan-chat-links">
-      <a mat-stroked-button href="#">See Plans</a>
-      <a mat-flat-button href="#" class="hover-stroked-button">Book a call</a>
+      <a mat-stroked-button href="#"><b>See Plans</b></a>
+      <a mat-flat-button href="#" class="hover-stroked-button"
+        ><b>Book a call</b></a
+      >
     </div>
   </div>
+  <img [src]="bg.hero" alt="video-trees" class="hero-bg" />
 
   <div class="video-container">
     <video class="video-player" autoplay loop muted>
@@ -22,20 +28,22 @@
       Your browser does not support the video tag.
     </video>
   </div>
+  <img [src]="bg.videoTrees" alt="video-trees" class="video-trees" />
 
   <div class="mvp-section">
     <img
-      src="assets/cute-ninja-meditation-yoga-cartoon-vector-icon-illustration-people-sport-icon-concept-isolated-flat.png"
+      src="../assets/cute-ninja-meditation-yoga-cartoon-vector-icon-illustration-people-sport-icon-concept-isolated-flat.png"
       alt="ninja-meditation"
       class="ninja-meditation"
       style="visibility: hidden"
     />
     <h1 class="mvp-line">
-      Our core value is delivering stunning MVPs and transforming products
-      ensuring impactful results
+      As a studio that values both people and design, we craft stunning MVPs and
+      transform products, ensuring impactful results and elevating your brand’s
+      online presence with masterful expertise.
     </h1>
     <img
-      src="assets/cute-ninja-meditation-yoga-cartoon-vector-icon-illustration-people-sport-icon-concept-isolated-flat.png"
+      src="../assets/cute-ninja-meditation-yoga-cartoon-vector-icon-illustration-people-sport-icon-concept-isolated-flat.png"
       alt="ninja-meditation"
       class="ninja-meditation"
     />
@@ -43,12 +51,12 @@
 
   <div class="project-section">
     <div class="moto-section">
-      <h1 class="moto-line">We Are Purpose-Driven Kreators</h1>
+      <h1 class="moto-line">We Are the Creative Ninjas</h1>
       <h1 class="moto-desc">
-        At Kreators, we’re not just another design team; we’re passionate
-        creatives dedicated to crafting purposeful, impactful designs. Our
-        mission is to help brands with vision and heart succeed, delivering fast
-        and effective no-code solutions that bring your ideas to life.
+        We’re passionate creatives dedicated to crafting purposeful, impactful
+        designs. Our mission is to help brands with vision and heart succeed,
+        delivering fast and effective no-code solutions that bring your ideas to
+        life.
       </h1>
     </div>
     <div class="grid-container">
@@ -86,13 +94,18 @@
       </p>
     </div>
   </div>
+  <img
+    [src]="bg.thingsSunBirds"
+    alt="sun-w-bird"
+    class="things-we-do-well-section-sun-w-bird"
+  />
+  <img [src]="bg.things" alt="things-bg" class="things-we-do-well-section-bg" />
 
   <div class="ninja-journey-section">
-    <h1 class="ninja-journey-h1">
-      Turn your ideas into experience with Ninja Journey
-    </h1>
+    <h1 class="ninja-journey-h1">Transform Your Ideas into Experiences</h1>
     <h6 class="ninja-journey-sub-text">
-      Design as you know it is out the door. Design as you want it just arrived.
+      Join us on a collaborative journey where your visions come to life through
+      innovative design and expert execution
     </h6>
     <div class="build-launch-grow">
       @for(ninja of ninjaJourney; track ninja){ @if(ninja.h1 === 'arrows'){
@@ -119,16 +132,17 @@
       } }
     </div>
     <div class="ninja-journey-links">
-      <a mat-stroked-button href="#">See Plans</a>
-      <a mat-flat-button href="#" class="hover-stroked-button">Book a call</a>
+      <a mat-stroked-button href="#"><b>See Plans</b></a>
+      <a mat-flat-button href="#" class="hover-stroked-button"
+        ><b>Book a call</b></a
+      >
     </div>
   </div>
 
   <div class="benefits-container">
     <h1>What Benefits You Get?</h1>
     <p class="benefits-sub-line">
-      Perks so good you'll never need to go anywhere else for your design.
-      Seriously.
+      Experience great perks that make us your one-stop design solution
     </p>
     <div class="benefits-card-loop">
       @for(card of benefitsCards; track card){
@@ -150,16 +164,13 @@
       }
     </div>
     <a mat-flat-button href="#" class="hover-stroked-button book-a-call"
-      >Book a call</a
+      ><b>Book a call</b></a
     >
   </div>
 
   <div class="pricing-container">
     <h1>Pricing</h1>
-    <p class="pricing-sub-line">
-      Perks so good you'll never need to go anywhere else for your design.
-      Seriously.
-    </p>
+    <p class="pricing-sub-line">Find the perfect plan for you</p>
 
     <div class="pricing-card-loop">
       @for(card of pricingCards; track card){
@@ -176,7 +187,7 @@
 
           <p class="what-include">
             <img
-              src="assets/mdi_ninja-star.svg"
+              src="../assets/mdi_ninja-star.svg"
               alt="ninja-start"
               class="ninja-start"
             />
@@ -199,7 +210,7 @@
             mat-flat-button
             href="#"
             class="hover-stroked-button adjust-card-btn"
-            >Schedule For Personalised Plan</a
+            ><b>Schedule For Personalised Plan</b></a
           >
         </div>
       </div>
@@ -229,7 +240,9 @@
   <div class="dream-call">
     <h1>Ready to build your dream app today?</h1>
     <p>Let’s make something engaging</p>
-    <a mat-flat-button href="#" class="hover-stroked-button">Book a call</a>
+    <a mat-flat-button href="#" class="hover-stroked-button"
+      ><b>Book a call</b></a
+    >
   </div>
 
   <div class="app-name">
@@ -246,11 +259,11 @@
   <div class="socials">
     <div class="social-links">
       <a href="#">
-        <img src="/assets/fa_linkedin.svg" alt="fa-linkedin" id="fa-linkedin" />
+        <img src="../assets/fa_linkedin.svg" alt="fa-linkedin" id="fa-linkedin" />
       </a>
       <a href="#">
         <img
-          src="/assets/fa_youtube-play.svg"
+          src="../assets/fa_youtube-play.svg"
           alt="fa-youtube-play"
           id="fa-youtube-play"
         />
@@ -258,4 +271,5 @@
     </div>
     <h6 id="copywrite">© 2024 DZINE STUDIO</h6>
   </div>
-</ng-container>
+  <img [src]="bg.footer" alt="footer-bg" class="footer-bg" />
+</div>

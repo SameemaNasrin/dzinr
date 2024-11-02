@@ -7,6 +7,28 @@
   z-index: 1000;
 }
 
+.things-we-do-well-section-sun-w-bird {
+  margin-top: -150vh;
+  margin-bottom: 10vh;
+  max-width: 10vw;
+  margin-left: 20vw;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.things-we-do-well-section-bg {
+  max-width: 100vw;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.footer-bg {
+  max-width: 100vw;
+  margin-top: -150vh;
+  position: relative;
+  z-index: -1;
+}
+
 h1,
 h2,
 h6,
@@ -19,6 +41,16 @@ mat-panel-title {
 
 p {
   color: (--font-color-light);
+}
+
+a {
+  font-size: 1rem;
+}
+
+.video-trees {
+  max-width: 100vw;
+  margin-top: -30vh;
+  z-index: -1;
 }
 
 .logo-container.hidden {
@@ -42,22 +74,32 @@ p {
   min-height: 95vh;
 }
 
+.hero-bg {
+  max-width: 100vw;
+  position: absolute;
+  top: 40vh;
+  z-index: -1;
+  opacity: 0.5;
+}
+
 .tag-line {
   font-size: var(--font-lg);
   font-family: var(--font-family);
-  line-height: 95%;
+  line-height: var(--font-lg);
   font-weight: 400;
   margin-bottom: 4vh;
   color: var(--font-color);
+  text-align: center;
 }
 
 .sub-text {
-  font-size: var(--font-md);
+  font-size: 1.2rem;
   font-family: var(--font-family);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 5vh;
   color: var(--font-color);
   opacity: 0.7;
+  text-align: center;
 }
 
 .plan-chat-links a,
@@ -90,8 +132,8 @@ p {
 }
 
 .video-container {
-  width: 90vw; /* 80% of viewport width */
-  height: 98vh; /* 95% of viewport height */
+  max-width: 90vw; /* 80% of viewport width */
+  max-height: 98vh;
   margin: 0 auto; /* Center horizontally */
   border-radius: 20px; /* Rounded corners */
   overflow: hidden; /* Hide overflow for rounded corners */
@@ -107,7 +149,7 @@ p {
 }
 
 .mvp-section {
-  height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -149,6 +191,7 @@ p {
 
 .moto-line {
   padding-right: 5vw;
+  padding-left: 5vw;
   width: 100vw;
   font-size: var(--font-md-3);
   line-height: normal;
@@ -166,13 +209,15 @@ p {
 }
 
 .grid-container {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 98.5vw;
   height: 90vh;
   margin-top: 15vh;
-  grid-row-gap: 1vh;
-  grid-column-gap: 1vh;
+  row-gap: 0.5vw;
+  column-gap: 0.5vw;
+  justify-content: space-between;
 }
 
 .grid-item-1 {
@@ -322,6 +367,10 @@ p {
   margin-bottom: 10%;
 }
 
+.ninja-start {
+  max-width: 1rem;
+}
+
 .benefits-container,
 .pricing-container,
 .questions-container,
@@ -341,6 +390,7 @@ p {
   font-weight: 500;
   text-align: center;
   margin-top: 15vh;
+  line-height: var(--font-md-2);
 }
 
 .dream-call > h1 {
@@ -365,7 +415,8 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color-light);
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15); */
 }
 
 .benefits-card-loop {
@@ -383,8 +434,10 @@ p {
 }
 
 .benefits-cards p {
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
   opacity: 0.8;
+  font-weight: 500;
+  line-height: 1rem;
   font-weight: 500;
   line-height: 1rem;
 }
@@ -429,7 +482,7 @@ p {
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
-    url("/assets/Card.png");
+    url("../assets/Card.png");
   background-size: cover;
 
   border: 0.5px solid var(--border-color-light);
@@ -537,6 +590,10 @@ mat-expansion-panel {
   border-bottom: 1px solid var(--primary-color-50-op);
 }
 
+mat-expansion-panel > p {
+  font-size: 1rem;
+}
+
 mat-panel-title {
   font-size: var(--font-md);
   line-height: var(--font-md);
@@ -585,23 +642,24 @@ mat-panel-title:hover {
   color: var(--font-color);
 }
 
-.socials{
-    display: flex;
-    flex-direction: row;
-    width: 84vw;
-    margin-left: 7vw;
-    justify-content: space-between;
-    align-items: center;
+.socials {
+  display: flex;
+  flex-direction: row;
+  width: 84vw;
+  margin-left: 7vw;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#fa-linkedin, #fa-youtube-play {
-    width: 47px;
-    padding-right: 20px;
-    margin-top: 1rem;
+#fa-linkedin,
+#fa-youtube-play {
+  width: 47px;
+  padding-right: 20px;
+  margin-top: 1rem;
 }
 
-#copywrite{
-    font-size: var(--font-sm);
+#copywrite {
+  font-size: var(--font-sm);
 }
 @media only screen and (max-width: 600px) {
   .ninja-stage-arrows {
@@ -651,12 +709,39 @@ mat-panel-title:hover {
     align-items: center;
   }
 
-  .app-name{
+  .app-name {
     flex-direction: column;
   }
 
   .app-name > h1 {
     font-size: 5rem;
     letter-spacing: -5px;
+  }
+
+  .mvp-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ninja-meditation {
+    min-width: 50vw;
+  }
+
+  .things-we-do-well-section-sun-w-bird {
+    margin-left: 70vw;
+    max-width: 20vw;
+  }
+
+  .design-dev-section {
+    flex-direction: column;
+  }
+
+  .footer-bg {
+    margin-top: -50vh;
+    opacity: 0.5;
+  }
+
+  .video-trees {
+    margin-top: -10vh;
   }
 }
