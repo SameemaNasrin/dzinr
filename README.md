@@ -28,24 +28,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## gh-page deployment process
-Build project through angular cli : ng build --base-href "https://SameemaNasrin.github.io/dzinr/" --configuration=production
+1. Build project through angular cli : 
 
+        ng build --base-href "https://SameemaNasrin.github.io/dzinr/" --configuration=production
 
-Change folder in CLI : cd dist/dzinr
-Initialize new git in dist/dzinr folder:
+2. Change folder in CLI : 
 
-    git init
-    git remote add origin https://github.com/SameemaNasrin/dzinr.git
+        cd dist/dzinr
+
+3. Initialize new git in dist/dzinr folder:
+
+        git init
+        git remote add origin https://github.com/SameemaNasrin/dzinr.git
     
-Commit the generated files and folder to new branch : 
+4. Commit the generated files and folder to new branch : 
 
-    git checkout -b <new_branch_name>
-    git add .
-    git commit -m '<commit_message>'
-    git push --set-upstream origin <new_branch_name>
+        git checkout -b <new_branch_name>
+        git add .
+        git commit -m '<commit_message>'
+        git push --set-upstream origin <new_branch_name>
 
                                                       
-Deploy <new_branch_name> (root) from github>settings>Pages : and we are LIVE!!!
+5. Deploy <new_branch_name> (root) from github>settings>Pages : and we are LIVE!!!
                                               
 
 
