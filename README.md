@@ -32,16 +32,17 @@ Build project through angular cli : ng build --base-href "https://SameemaNasrin.
 
 
 Change folder in CLI : cd dist/dzinr
-Initialize new git in dist/dzinr folder: git init
+Initialize new git in dist/dzinr folder:
 
-                                         git remote add origin https://github.com/SameemaNasrin/dzinr.git
-Commit the generated files and folder to new branch : git checkout -b <new_branch_name>
+    git init
+    git remote add origin https://github.com/SameemaNasrin/dzinr.git
+    
+Commit the generated files and folder to new branch : 
 
-                                                      git add .
-                                                      
-                                                      git commit -m '<commit_message>'
-                                                      
-                                                      git push --set-upstream origin <new_branch_name>
+    git checkout -b <new_branch_name>
+    git add .
+    git commit -m '<commit_message>'
+    git push --set-upstream origin <new_branch_name>
 
                                                       
 Deploy <new_branch_name> (root) from github>settings>Pages : and we are LIVE!!!
