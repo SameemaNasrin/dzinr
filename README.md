@@ -25,3 +25,33 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## gh-page deployment process
+1. Build project through angular cli : 
+
+        ng build --base-href "https://SameemaNasrin.github.io/dzinr/" --configuration=production
+
+2. Change folder in CLI : 
+
+        cd dist/dzinr
+
+3. Initialize new git in dist/dzinr folder:
+
+        git init
+        git remote add origin https://github.com/SameemaNasrin/dzinr.git
+    
+4. Commit the generated files and folder to new branch : 
+
+        git checkout -b <new_branch_name>
+        git add .
+        git commit -m '<commit_message>'
+        git push --set-upstream origin <new_branch_name>
+
+                                                      
+5. Deploy <new_branch_name> (root) from github>settings>Pages : and we are LIVE!!!
+                                              
+
+
+                                         
+
