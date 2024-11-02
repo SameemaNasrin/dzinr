@@ -1,4 +1,4 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, signal, Inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -6,6 +6,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogTitle,
+  MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
+} from '@angular/material/dialog';
+import { FormControl, FormsModule, Validators } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { merge } from 'rxjs';
+
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -18,6 +39,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatCardModule,
     CommonModule,
     MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -169,8 +194,8 @@ export class AppComponent {
     things: 'assets/Montain 2.svg',
     thingsSunBirds: 'assets/Sun w Birds.svg',
     videoTrees: 'assets/trees.png',
-    footer: 'assets/bg2.png'
-  }
+    footer: 'assets/bg2.png',
+  };
 
   title = 'dzinr';
   isHidden = false;
@@ -178,6 +203,22 @@ export class AppComponent {
 
   zoomScale = 4; // Start with a zoomed-in scale of 4
   videoLastScrollTop = 0; // Track the last scroll position
+
+  animal: string = '';
+  name: string = '';
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      data: { name: this.name, animal: this.animal },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -231,5 +272,53 @@ export class AppComponent {
       this.videoLastScrollTop =
         currentScrollTopForVideo <= 0 ? 0 : currentScrollTopForVideo;
     });
+  }
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'dialog-overview-example-dialog.html',
+  standalone: true,
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
+    ReactiveFormsModule,
+  ],
+  styleUrl: './form-dialog.component.css',
+
+})
+export class DialogOverviewExampleDialog {
+  email = new FormControl('', [Validators.required, Validators.email]);
+
+  errorMessage = '';
+
+  services = ['UI/UX', 'Rebranding', 'Portfolio Website', 'API Integration', 'UI/UX', 'Rebranding', 'Portfolio Website', 'API Integration']
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+  ) {
+    merge(this.email.statusChanges, this.email.valueChanges)
+      .pipe(takeUntilDestroyed())
+      .subscribe(() => this.updateErrorMessage());
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  updateErrorMessage() {
+    if (this.email.hasError('required')) {
+      this.errorMessage = 'You must enter a value';
+    } else if (this.email.hasError('email')) {
+      this.errorMessage = 'Not a valid email';
+    } else {
+      this.errorMessage = '';
+    }
   }
 }

@@ -12,7 +12,10 @@
     </h6>
     <div class="plan-chat-links">
       <a mat-stroked-button href="#"><b>See Plans</b></a>
-      <a mat-flat-button href="#" class="hover-stroked-button"
+      <a
+        mat-flat-button
+        class="hover-stroked-button"
+        (click)="openDialog()"
         ><b>Book a call</b></a
       >
     </div>
@@ -133,7 +136,7 @@
     </div>
     <div class="ninja-journey-links">
       <a mat-stroked-button href="#"><b>See Plans</b></a>
-      <a mat-flat-button href="#" class="hover-stroked-button"
+      <a mat-flat-button class="hover-stroked-button" (click)="openDialog()"
         ><b>Book a call</b></a
       >
     </div>
@@ -163,7 +166,7 @@
       </div>
       }
     </div>
-    <a mat-flat-button href="#" class="hover-stroked-button book-a-call"
+    <a mat-flat-button class="hover-stroked-button book-a-call" (click)="openDialog()"
       ><b>Book a call</b></a
     >
   </div>
@@ -240,7 +243,7 @@
   <div class="dream-call">
     <h1>Ready to build your dream app today?</h1>
     <p>Let’s make something engaging</p>
-    <a mat-flat-button href="#" class="hover-stroked-button"
+    <a mat-flat-button class="hover-stroked-button" (click)="openDialog()"
       ><b>Book a call</b></a
     >
   </div>

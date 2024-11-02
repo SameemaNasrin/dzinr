@@ -1,0 +1,73 @@
+<p mat-dialog-title>Hey there, Let's get started!</p>
+<mat-dialog-content>
+  <p>
+    Share your details and we'll respond in one business day. | Just want to
+    chat? <a href="#">email us</a>
+  </p>
+  <!-- <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <div>Favorite Animal</div>
+    <input matInput [(ngModel)]="data.animal" />
+  </mat-form-field> -->
+  <form>
+    <div>
+      <span>What’s your name?</span> <br />
+      <mat-form-field>
+        <input matInput required />
+      </mat-form-field>
+    </div>
+    <div>
+      <span>Your e-mail </span><br />
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          formControlName="email"
+          (blur)="updateErrorMessage()"
+          required
+        />
+        @if (email.invalid) {
+        <mat-error>{{errorMessage}}</mat-error>
+        }
+      </mat-form-field>
+    </div>
+    <div>
+      <span>Company</span> <br />
+      <mat-form-field>
+        <input matInput readonly />
+      </mat-form-field>
+    </div>
+    <div>
+      <span>Website (if applicable) </span><br />
+      <mat-form-field>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <div class="big-form-field">
+      <span>What service are you looking for?</span>
+      <ul>
+        @for(service of services; track service){
+
+        <li>{{ service }}</li>
+        }
+      </ul>
+    </div>
+    <div class="big-form-field">
+      <span>Tell us about your project </span>
+      <mat-form-field>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button
+    mat-button
+    [mat-dialog-close]="data.animal"
+    cdkFocusInitial
+    class="submit-request-btn"
+  >
+    Submit Request
+  </button>
+</mat-dialog-actions>
