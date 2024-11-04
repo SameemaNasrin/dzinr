@@ -7,6 +7,11 @@
   z-index: 1000;
 }
 
+.flex-container{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .things-we-do-well-section-sun-w-bird {
   margin-top: -150vh;
   margin-bottom: 10vh;
@@ -49,7 +54,7 @@ a {
 
 .video-trees {
   max-width: 100vw;
-  margin-top: -30vh;
+  margin-top: -5vh;
   z-index: -1;
 }
 
@@ -742,6 +747,11 @@ mat-panel-title:hover {
   }
 
   .video-trees {
-    margin-top: -10vh;
+    margin-top: -2vh;
+  }
+
+  .app-info, .socials{
+    flex-direction: column;
+    width: 80vw;
   }
 }
