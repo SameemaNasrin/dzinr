@@ -754,4 +754,18 @@ mat-panel-title:hover {
     flex-direction: column;
     width: 80vw;
   }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .grid-item-3 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  .grid-item-4 {
+    grid-column: 1 / span 1;
+  }
 }
